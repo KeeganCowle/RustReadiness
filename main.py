@@ -49,13 +49,13 @@ def main() -> None:
         check_result = check.run_test(args.get_args())
         if check_result == False:
             # check failed
-            failed.append(check.__class__.__name__ + ' ' + check.get_one_line_fail())
+            failed.append(check.__class__.__name__ + ' | ' + check.get_one_line_fail())
         elif check_result == True:
             # check passed
             passed.append(check.__class__.__name__)
         else:
             # inconclusive 
-            inconclusive.append(check.__class__.__name__ + ' | ' + check.get_one_line_fail())
+            inconclusive.append(check.__class__.__name__ )
 
     for passed_check in passed:
         logger.info("[" + LogColours.GREEN + "PASS" + LogColours.NORMAL + '] ' + passed_check)
