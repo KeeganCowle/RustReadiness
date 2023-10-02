@@ -31,7 +31,7 @@ class CPUGovCheck(IChecker):
         """
         Return a 1 liner that will go next to the check name if it fails on the report
         """
-        return "One or more of your CPU cores are not set to 'performance' mode. https://github.com"
+        return "One or more of your CPU cores are not set to 'performance' mode. https://github.com/SA-Flowz/RustReadiness/blob/main/docs/checks/CPUGovCheck.md"
     
 
     
