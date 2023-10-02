@@ -45,6 +45,8 @@ def main() -> None:
     failed: List[str] = []
     inconclusive: List[str] = []
     # loop the checks and run em
+    logging.info('#' * 10)
+    logging.info('Running tests now...')
     for check in loaded_checks:
         check_result = check.run_test(args.get_args())
         if check_result == False:
@@ -56,6 +58,8 @@ def main() -> None:
         else:
             # inconclusive 
             inconclusive.append(check.__class__.__name__ )
+    logging.info('#' * 10)
+    logging.info('Test have been run. Collecting results...')
 
     for passed_check in passed:
         logger.info("[" + LogColours.GREEN + "PASS" + LogColours.NORMAL + '] ' + passed_check)
