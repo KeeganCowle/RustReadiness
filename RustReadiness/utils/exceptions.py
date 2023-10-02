@@ -1,0 +1,3 @@
+
+class ParserNotSetupException(Exception):
+    pass
